@@ -1,7 +1,9 @@
 # React Real Estate UI Design
 
-for the list page go to the home url and then - /list
-from the list page you can access single page by clicking on image or name
+for run the application - npm install and then npm run dev
+
+for the list page go to the home URL and then - /list
+from the list page, you can access the single page by clicking on an image or name
 
 
 
