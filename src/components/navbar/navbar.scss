@@ -1,0 +1,156 @@
+@import "../../responsive.scss";
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+
+  a {
+    transition: all 0.4s ease;
+
+    @include sm {
+      display: none;
+    }
+
+    &:hover {
+      scale: 1.05;
+    }
+  }
+
+  .left {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex: 3;
+
+    .logo {
+      font-weight: bold;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 28px;
+        margin-right: 10px;
+      }
+
+      span {
+        @include md {
+          display: none;
+        }
+
+        @include sm {
+          display: initial;
+        }
+      }
+    }
+  }
+
+  .right {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    background-color: #faf5f3;
+
+    @include md {
+      background-color: transparent;
+    }
+
+    @include sm {
+      span {
+        display: none;
+      }
+    }
+
+    .user {
+      display: flex;
+      font-weight: bold;
+      align-items: center;
+
+      img {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 20px;
+      }
+
+      .profile {
+        padding: 12px 24px;
+        background-color: #fece51;
+        border-radius: 5px;
+        cursor: pointer;
+        border: none;
+        position: relative;
+
+        .notification {
+          position: absolute;
+          top: -8px;
+          right: -8px;
+          background-color: red;
+          width: 26px;
+          height: 26px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 12px;
+          color: white;
+        }
+      }
+    }
+
+    a {
+      padding: 12px 24px;
+      margin: 20px;
+    }
+
+    .register {
+      background-color: #fece51;
+    }
+
+    .menuIcon {
+      display: none;
+      z-index: 999;
+
+      img {
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+      }
+
+      @include sm {
+        display: initial;
+      }
+    }
+
+    .menu {
+      position: absolute;
+      top: 0;
+      right: -50%;
+      background-color: black;
+      color: white;
+      height: 100vh;
+      width: 50%;
+      transition: all 1s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+
+      &.active {
+        right: 0;
+      }
+
+      @include sm {
+        a {
+          display: initial;
+        }
+      }
+    }
+  }
+}
